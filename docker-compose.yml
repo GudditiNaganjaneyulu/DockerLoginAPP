@@ -7,7 +7,7 @@ services:
             MYSQL_ROOT_PASSWORD: password 
             MYSQL_DATABASE: logindb
 
-    loginapp:
+    loginapp1:
         build:
             dockerfile: Dockerfile 
             context: ./
@@ -21,5 +21,21 @@ services:
             WAIT_HOSTS_TIMEOUT: 90
         ports:
             - "8888:8888"
+        depends_on: 
+            - mysql-server
+    loginapp2:
+        build:
+            dockerfile: Dockerfile 
+            context: ./
+        environment: 
+            MSHOST: mysql-server
+            MSUSER: root
+            MSPASSWORD: password
+            MSDATABASE: logindb
+            SERVERPORT: 9999
+            WAIT_HOSTS: mysql-server:3306
+            WAIT_HOSTS_TIMEOUT: 90
+        ports:
+            - "9999:9999"
         depends_on: 
             - mysql-server
