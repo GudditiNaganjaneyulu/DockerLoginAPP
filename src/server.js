@@ -143,7 +143,7 @@ app.use((req, res, next) => {
 app.get("/profile", (req, res) => {
   if (req.user) {
     res.render("profile", {
-      message: "Welcome " + req.user,
+      message: "Welcome 😊 to the sample login page " + req.user,
       messageClass: "alert-info",
     });
   } else {
