@@ -1,0 +1,7 @@
+FROM gudditi/webapp
+MAINTAINER gudditi
+RUN apt update -y
+CMD service nginx start
+WORKDIR /usr/share/nginx/html
+COPY ./html .
+EXPOSE 80
