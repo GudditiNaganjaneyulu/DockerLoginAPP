@@ -39,3 +39,14 @@ services:
             - "9999:9999"
         depends_on: 
             - mysql-server
+
+
+    nginx:
+      build:
+        dockerfile: Dockerfile
+        context: ./nginx
+      ports:
+          - "80:80"
+      depends_on:
+          - loginapp1
+          - loginapp2
