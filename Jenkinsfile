@@ -19,6 +19,7 @@ pipeline {
                 echo 'Deploying....'
                 sh 'docker ps '
                 sh 'curl -L http://3.6.36.50'
+                echo 'Deployed Application ....'
             }
         }
     }
