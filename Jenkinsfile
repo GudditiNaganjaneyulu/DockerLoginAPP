@@ -12,6 +12,7 @@ pipeline {
             steps {
                 echo 'Building Application..'
                 sh 'docker-compose up --build -d'
+                echo 'Building Application Done !!!..'
             }
         }
         stage('Deploy') {
