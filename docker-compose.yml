@@ -48,3 +48,4 @@ services:
       depends_on:
           - loginapp1
           - loginapp2
+    
