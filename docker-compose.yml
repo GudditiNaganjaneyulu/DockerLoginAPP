@@ -11,6 +11,7 @@ services:
         build:
             dockerfile: Dockerfile 
             context: ./
+        container_name: dockerloginapp_loginapp1_1
         environment: 
             MSHOST: mysql-server
             MSUSER: root
@@ -27,6 +28,7 @@ services:
         build:
             dockerfile: Dockerfile 
             context: ./
+        container_name: dockerloginapp_loginapp2_1
         environment: 
             MSHOST: mysql-server
             MSUSER: root
