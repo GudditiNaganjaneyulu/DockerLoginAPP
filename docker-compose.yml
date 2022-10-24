@@ -42,9 +42,7 @@ services:
 
 
     nginx:
-      build:
-        dockerfile: Dockerfile
-        context: ./nginx
+      image: gudditi/nginxloadbalancer:latest
       ports:
           - "80:80"
       depends_on:
