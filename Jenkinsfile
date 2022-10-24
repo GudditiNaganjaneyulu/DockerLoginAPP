@@ -8,7 +8,7 @@ pipeline {
                 sh ' ls -ltr '
             }
         }
-        stage('Build) {
+        stage('Build') {
             steps {
                 echo 'Building Application..'
                 sh 'docker-compose up --build -d'
