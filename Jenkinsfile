@@ -8,7 +8,7 @@ pipeline {
                 sh 'docker rm $(docker ps -a -q)'
             }
         }
-    }
+    
 
     stages {
         stage('Test') {
