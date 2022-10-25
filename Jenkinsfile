@@ -1,5 +1,13 @@
 pipeline {
     agent any
+    stages {
+        stage ('PreConfig'){
+            steps {
+                echo 'Removing Running Containers'
+                sh 'docker rm $(docker ps -a -q)'
+            }
+        }
+    }
 
     stages {
         stage('Test') {
