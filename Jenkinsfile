@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'PreConfig .....'
                 sh 'sudo chmod 666 /var/run/docker.sock'
+                echo 'service docker status'
    
             }
         }
