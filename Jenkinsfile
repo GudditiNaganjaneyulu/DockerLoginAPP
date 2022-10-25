@@ -4,6 +4,7 @@ pipeline {
         stage ('PreConfig'){
             steps {
                 echo 'Removing Running Containers'
+                sh 'sudo chmod 666 /var/run/docker.sock'
                 sh 'docker rm $(docker ps -a -q)'
             }
         }
